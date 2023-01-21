@@ -1,0 +1,239 @@
+#tite{
+    transition: 0.2s ease-out;
+    color: azure;
+}
+*{
+    font-family: monospace;
+    box-sizing: border-box;
+}
+body{
+    --theme : rgb(217, 247, 100);
+    --themesombre : rgb(167, 197, 50);
+    scroll-behavior: smooth;
+    background: rgb(8, 15, 15);
+    background-size: fixed;
+    background-position: fixed;
+}
+.cardis {
+    animation: bounce-in-right 1s  ;
+  }
+  @keyframes bounce-in-right {
+    0% {
+		transform: perspective(1000px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(900px) translateZ(100px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(1000px) translateZ(100px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(1000px) rotateY(360deg) scale(0.715);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(1000px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+
+.toto{
+    animation-play-state: running;
+}
+
+.checker input{
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.checker{
+    width: 10vw;
+    margin: 20px;
+    position: relative;
+    --border: rgb(193, 24, 24);
+    --cursor: rgb(223, 213, 213);
+    font-size: 20px;
+}
+.checker label{
+    cursor: pointer;
+    user-select: none;
+    display: grid;
+    color: rgb(255, 251, 251);
+    grid-template-columns: 4em 1fr;
+    grid-template-areas: "checkbox label";
+    gap: 5em;
+}
+.checker label:hover{
+    color: rgb(171, 171, 171);
+}
+.checker label::before{
+    content: '';
+   
+    grid-area: checkbox;
+    display: block;
+    width: 80%;
+    height: 1em;
+    
+    border: solid 2px var(--themesombre);
+    margin-left: 4em;
+}
+.checker label::before,
+.checker label::after{
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    content: '';
+    grid-area: checkbox;
+    display: block;
+
+    margin-top: .1em;
+}
+.checker label:hover::before,
+.checker label:hover::after{
+    transform: scale(1.1);
+}
+.checker label::after{
+    color: aliceblue;
+    content: "--";
+    text-align: center;
+    position: relative;
+   
+    left: -1px;
+    margin-left: 4em;
+    background-color: rgb(38, 38, 38);
+    border-radius: 10%;
+    border: solid 1px white;
+    width: 40%;
+    height: 1em;
+}
+.checker input:checked + label::before{
+    border:solid 2px var(--theme);
+    background-color: rgb(0, 0, 0);
+    
+}
+.checker input:checked + label::after{
+    content: 'ON';
+    color: rgb(188, 185, 185);
+    background-color: rgb(236, 231, 231);
+    border: solid 1px rgb(124, 137, 129);
+    left:2em
+}
+
+.card{
+    user-select: none;
+    border: solid 10px rgb(180, 140, 120);
+    max-width: 600px;
+    min-width: 300px;
+    cursor: pointer;
+    width: 25vw;
+    text-align: center;
+    transform-style: preserve-3d;
+    margin: 5vw;
+    background: linear-gradient();
+    box-shadow: 0px 8px 20px 2px rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: floa 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
+   
+    
+}
+@keyframes float{
+    0%{
+      transform: translateZ(20px);
+    }
+    100%{
+      transform: translateY(-21px) translateX(-13px) translateZ(30px);
+    }
+  }
+.card:hover{
+    box-shadow: 0px 9px 19px 8px rgb(0, 0, 0);
+}
+.card img {
+    
+    user-select: none;
+    transition: all 1s;
+    filter: brightness();
+    margin: 0;
+    
+    width: 98%;
+
+    height: 98%;
+  
+    
+   
+ 
+}
+
+.noir{
+    background:var(--theme);
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+
+}
+.noir:hover{
+  width: 100%;
+}
+.glow{
+    animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
+    opacity: 0.2;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-blend-mode:overlay,soft-light;
+    background:url("https://media.istockphoto.com/id/964809716/fr/photo/arri%C3%A8re-plan-holographique.jpg?s=612x612&w=0&k=20&c=iTkIFs7wyomdohXeqEpddb5okdGzJiTri6rI70qS1VU=") , radial-gradient( circle at 40% 40%,   rgba(6, 218, 255, 0.422), 
+      grey 40%, black 100%, 
+      red 40%, 
+      black 95%,
+      blue 95%  );
+    mix-blend-mode:screen;
+
+}
+.conteneur_card{
+  
+    display: flex;
+    flex-wrap: wrap;
+    empty-cells:hide;
+    justify-content: center;
+  
+}
+.entrer_conteneur{
+    border-bottom: solid 1px var(--theme);
+    text-align: center;
+    display: flex;
+    background: rgb(27, 26, 26);
+    width: 100vw;
+}
+.entré{
+    outline: none;
+    border: solid 2px;
+    background: rgb(93, 94, 94);
+    font-size: 1.5em;
+    text-align: center;
+    width: 50vw;
+    height: 50px;
+    border-radius: 7px;
+    transition: all 0.04s;
+}
+.card::before{
+   
+    position: absolute;
+    width: 400px;
+    background: red;
+}
+.label{
+    margin: auto;
+    display: block;
+}
+.entré:focus{
+    border: solid 4px black;
+    box-shadow: 0px 2px 20px 2px rgba(252, 252, 252, 0.283);
+}
+
