@@ -1,4 +1,4 @@
-const titre=document.getElementById('titre');
+/*const titre=document.getElementById('titre');*/
 const box= document.querySelectorAll('.card');
 const glow = document.querySelectorAll('.glow');
 
@@ -12,11 +12,7 @@ function choisir(choices) {
     return choices[index];
   };
 
-setInterval(()=>
-{
-    titre.innerText=choisir(liste)
-},1000)
-
+  
 
 box.forEach(el =>{
   el.addEventListener("mousemove", e =>{
