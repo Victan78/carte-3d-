@@ -16,7 +16,7 @@ function choisir(choices) {
 
 
 
-const apiKey = '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';
+const apiKey = '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';
 const url = 'https://api.openai.com/v1/images/generations';
 const boutton_submit= document.getElementById('submit_boutton')
 
@@ -42,7 +42,7 @@ function Dream(promptValue) {
         'model': 'image-alpha-001',
         'prompt': promptValue,
         'num_images': 1,
-        'size': '1024x1024',
+        'size': '512x512',
         'response_format': 'url'
       })
     })
