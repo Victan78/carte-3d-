@@ -42,7 +42,7 @@ function Dream(promptValue) {
         'model': 'image-alpha-001',
         'prompt': promptValue,
         'num_images': 1,
-        'size': '512x512',
+        'size': '1024x1024',
         'response_format': 'url'
       })
     })
