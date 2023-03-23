@@ -6,6 +6,7 @@ const boxi= document.getElementById('cards');
 const boxi1= document.getElementById('cards1');
 const boxi2= document.getElementById('cards2');
 const boxi3= document.getElementById('cards3');
+const carti= document.querySelector('.carti')
 const conteneur= document.getElementById('conteneurdecarte');
 const anima =document.querySelectorAll(".cardi");
 function shadoww() {
@@ -59,10 +60,6 @@ function cliquer(nombre) {
       carte.style.zIndex="2"
 }
 
-carte.addEventListener('blur',()=>{
-   
-    carte.style.width="10px"
-})
 
 
 
