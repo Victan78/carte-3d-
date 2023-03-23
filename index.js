@@ -16,13 +16,13 @@ function choisir(choices) {
 
 
 
-const apiKey = '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';
+const apikey="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"
 const url = 'https://api.openai.com/v1/images/generations';
 const boutton_submit= document.getElementById('submit_boutton')
 
 const headers = {
   'Content-Type': 'application/json',
-  'Authorization': `Bearer ${apiKey}`
+  'Authorization': `Bearer ${apikey}`
 };
 
 const data = {
