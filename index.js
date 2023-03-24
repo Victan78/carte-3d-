@@ -16,7 +16,7 @@ function choisir(choices) {
 
 
 
-const apikey="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"
+const apikey="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"
 const url = 'https://api.openai.com/v1/images/generations';
 const boutton_submit= document.getElementById('submit_boutton')
 
