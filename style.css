@@ -18,6 +18,7 @@
     transition: 0.2s ease-out;
 }
 body{
+    
     --theme : rgb(217, 247, 100);
     --themesombre : rgb(167, 197, 50);
     scroll-behavior: smooth;
