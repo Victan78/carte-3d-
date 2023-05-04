@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Display as grid</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li class="ui-state-default cardo">1</li>
+  <li class="ui-state-default cardo">2</li>
+  <li class="ui-state-default cardo">3</li>
+  <li class="ui-state-default cardo">4</li>
+  <li class="ui-state-default cardo">5</li>
+  <li class="ui-state-default cardo">6</li>
+  <li class="ui-state-default cardo">7</li>
+  <li class="ui-state-default cardo">8</li>
+  <li class="ui-state-default cardo">9</li>
+  <li class="ui-state-default cardo">10</li>
+  <li class="ui-state-default cardo">11</li>
+  <li class="ui-state-default cardo">12</li>
+</ul>
+ 
+ 
+</body>
+</html>
