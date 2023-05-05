@@ -10,43 +10,16 @@ const carti= document.querySelector('.carti')
 const conteneur= document.getElementById('conteneurdecarte');
 const anima =document.querySelectorAll(".cardi");
 function shadoww() {
-    if (ombr.checked ) {
-        for (let index = 1; index < 5; index++) {
-            const element = document.getElementById(`cards${index}`);
-            const elementcarte = document.getElementById(`cartes${index}`);
-            if(elementcarte.style.opacity<1){
-              elementcarte.classList.toggle('cardi');
-              element.style.filter =" brightness(0.1)";
-              elementcarte.style.boxShadow="0px 0px 15px 2px rgb(167, 197, 50)"
-            }
+  var body= document.querySelector('body');
+  body.style.background = "black";
            
            
          } 
-        console.log("on")
-       
-        boxi.style.filter =" brightness(0.1)";
-     
-      }
-    else { 
-    for (let index = 1; index < 20; index++) {
-            const element = document.getElementById(`cards${index}`);
-            const elementcarte = document.getElementById(`cartes${index}`);
-            elementcarte.classList.remove('cardi')
-            element.style.filter =" brightness(1)";
-            elementcarte.style.boxShadow="0px 8px 15px 1px rgb(50, 50, 50)"
-         } 
+        
+      
+ 
     
-    console.log("gjhghgjh")
-    ombr.style.background ="white"
-    ombr.style.color = "black"
-    boxi.style.filter =" brightness(1)";
-    boxi1.style.filter =" brightness(1)";
-    boxi2.style.filter =" brightness(1)";
-    boxi3.style.filter =" brightness(1)";
-
-  }
-};
-function cliquer(nombre) {
+ cliquer(nombre) {
 
 
       const element = document.getElementById(`cards${nombre}`);
