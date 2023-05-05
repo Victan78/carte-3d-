@@ -19,7 +19,7 @@ function shadoww() {
       
  
     
- cliquer(nombre) {
+ 
 
 
       const element = document.getElementById(`cards${nombre}`);
